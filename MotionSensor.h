@@ -9,9 +9,8 @@
 extern float ypr[3]; //yaw, pitch, roll
 extern float accel[3];
 extern float gyro[3];
-extern float q[3];
 extern float temp;
-extern float compass;
+extern float compass[3];
 
 extern int ms_open();
 extern int ms_update();

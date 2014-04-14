@@ -4,17 +4,19 @@ CXX_OPTS= -Wall -g -O2
 
 INSTALL=install
 
+PROG=mstest
+
 %.o: %.c                                                                         
 	$(CXX) $(CXXFLAGS) $(CXX_OPTS) $< -o $@ 
 
 
-all: smtest.o 
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) -o smtest \
+all: $(PROG).o 
+	$(CXX) $(LDFLAGS) $(CXXFLAGS) -o $(PROG) \
 		main.c \
 		MotionSensor/libMotionSensor.a \
 		libs/libI2Cdev.a
 
-smtest.o: MotionSensor/libMotionSensor.a libs/libI2Cdev.a
+$(PROG).o: MotionSensor/libMotionSensor.a libs/libI2Cdev.a
 
 MotionSensor/libMotionSensor.a:
 	$(MAKE) -C MotionSensor/ 
@@ -23,10 +25,10 @@ libs/libI2Cdev.a:
 	$(MAKE) -C libs/I2Cdev
 
 install1:
-	$(INSTALL) -m 755 controller $(DESTDIR)/usr/local/bin/
+	$(INSTALL) -m 755 $(PROG) $(DESTDIR)/usr/local/bin/
 
 clean:
 	cd MotionSensor && $(MAKE) clean
 	cd libs/I2Cdev && $(MAKE) clean
 	rm -rf *.o *~ *.mod
-	rm -rf smtest 
+	rm -rf $(PROG)

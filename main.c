@@ -11,9 +11,9 @@ int main() {
 	ms_open();
 	do{
 		ms_update();
-		printf("yaw = %2.3f\tpitch = %2.3f\troll = %2.3f\ttemperature = %2.2f\tcompass = %u\n",
+		printf("yaw = %2.1f\tpitch = %2.1f\troll = %2.1f\ttemperature = %2.1f\tcompass = %2.1f, %2.1f, %2.1f\n",
 		 ypr[YAW], ypr[PITCH],
-		 ypr[ROLL],temp,compass);
+		 ypr[ROLL],temp,compass[0],compass[1],compass[2]);
 		delay_ms(5);
 	}while(1);
 

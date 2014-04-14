@@ -67,3 +67,6 @@ yaw = -0.216            pitch = 1.506           roll = -1.587   t = 20.23       
 Current setup is to run at 40Hz, this can be adjusted in the ms_open function, however note that your code will need to read the values with respective speed or quicker. Otherwise the MPU fifo buffer will overflown.
 
 To read MPU see ms_update - it calls 'dmp read fifo' in a while loop. This means that if fifo is empty this will stall until a packet is available.
+
+-------------------------
+Gregory Dymarek

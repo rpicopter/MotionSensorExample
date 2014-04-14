@@ -4,6 +4,7 @@
 //
 // Changelog:
 //     2012-06-05 - add 3D math helper file to DMP6 example sketch
+//     2014-04-14 - added int32_t constructor (Gregory Dymarek, gregd72002@gmail.com)
 
 /* ============================================
 I2Cdev device library code is placed under the MIT license

@@ -37,7 +37,8 @@ Edit all Makefiles in all directories and adjust CXX. Issue make
 
 
 **Running:**
-  mstest
+  make sure you have i2c_dev module loaded (modprobe i2c_dev)
+  run mstest
   
 *Output:*
 Initializing I2C devices...

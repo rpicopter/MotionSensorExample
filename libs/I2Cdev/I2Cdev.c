@@ -2,6 +2,9 @@
 // Abstracts bit and byte I2C R/W functions into a convenient class
 // 6/9/2012 by Jeff Rowberg <jeff@rowberg.net>
 //
+// Updated:
+// 14/04/2014 by Gregory Dymare <gregd72002@gmail.com> - removed C++ dependencies
+//
 // Changelog:
 //     2012-06-09 - fix major issue with reading > 32 bytes at a time with Arduino Wire
 //                - add compiler warnings when using outdated or IDE or limited I2Cdev implementation

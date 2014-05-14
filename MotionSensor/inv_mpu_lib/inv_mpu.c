@@ -397,8 +397,8 @@ const struct gyro_reg_s reg =
 	.fifo_en        = 0x23,
 	.gyro_cfg       = 0x1B,
 	.accel_cfg      = 0x1C,
-		.accel_cfg2      = 0x00,
-		.lp_accel_odr	 = 0x00,
+	.accel_cfg2     = 0x00,
+	.lp_accel_odr   = 0x00,
 	.motion_thr     = 0x1F,
 	.motion_dur     = 0x20,
 	.fifo_count_h   = 0x72,
@@ -409,7 +409,7 @@ const struct gyro_reg_s reg =
 	.int_enable     = 0x38,
 	.dmp_int_status = 0x39,
 	.int_status     = 0x3A,
-		.accel_intel    = 0x00,
+	.accel_intel    = 0x00,
 	.pwr_mgmt_1     = 0x6B,
 	.pwr_mgmt_2     = 0x6C,
 	.int_pin_cfg    = 0x37,
@@ -420,7 +420,7 @@ const struct gyro_reg_s reg =
 	.mem_start_addr = 0x6E,
 	.prgm_start_h   = 0x70
 #ifdef AK89xx_SECONDARY
-	,.s0_addr        = 0x25,
+	,.s0_addr       = 0x25,
 	.s0_reg         = 0x26,
 	.s0_ctrl        = 0x27,
 	.s1_addr        = 0x28,
@@ -436,7 +436,8 @@ const struct gyro_reg_s reg =
 };
 const struct hw_s hw =
 {
-	.addr           = 0x68,
+	//.addr           = 0x68,
+	.addr           = 0x69,
 	.max_fifo       = 1024,
 	.num_reg        = 118,
 	.temp_sens      = 340,
@@ -520,7 +521,8 @@ const struct gyro_reg_s reg =
 };
 const struct hw_s hw =
 {
-	.addr           = 0x68,
+	//.addr           = 0x68,
+	.addr           = 0x69,
 	.max_fifo       = 1024,
 	.num_reg        = 128,
 	.temp_sens      = 321,

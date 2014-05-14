@@ -1,17 +1,17 @@
-CXX=g++
-CXXFLAGS= -Wall -g -O2
-CXX_OPTS= -Wall -g -O2
+GCC=gcc
+GCC_FLAGS= -Wall -g -O2 -lm
+GCC_OPTS= -Wall -g -O2
 
 INSTALL=install
 
 PROG=mstest
 
-%.o: %.c                                                                         
-	$(CXX) $(CXXFLAGS) $(CXX_OPTS) $< -o $@ 
+%.o: %.c
+	$(GCC) $(GCC_FLAGS) $(GCC_OPTS) $< -o $@ 
 
 
 all: $(PROG).o 
-	$(CXX) $(LDFLAGS) $(CXXFLAGS) -o $(PROG) \
+	$(GCC) $(LDFLAGS) $(GCC_FLAGS) -o $(PROG) \
 		main.c \
 		MotionSensor/libMotionSensor.a \
 		libs/libI2Cdev.a

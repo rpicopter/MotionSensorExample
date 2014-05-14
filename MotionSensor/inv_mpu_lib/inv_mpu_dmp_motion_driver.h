@@ -49,6 +49,11 @@
 
 #define INV_WXYZ_QUAT       (0x100)
 
+#if defined(__cplusplus)
+extern "C"
+{
+#endif
+
 /* Set up functions. */
 uint8_t dmp_load_motion_driver_firmware(void);
 uint8_t dmp_set_fifo_rate(uint16_t rate);
@@ -91,6 +96,10 @@ uint8_t dmp_enable_gyro_cal(uint8_t enable);
  * detected.
  */
 uint8_t dmp_read_fifo(int16_t *gyro, int16_t *accel, int32_t *quat, int16_t *sensors, uint8_t *more);
+
+#if defined(__cplusplus)
+}
+#endif
 
 #endif  /* _INV_MPU_DMP_MOTION_DRIVER_H_ */
 

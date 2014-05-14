@@ -186,4 +186,3 @@ uint8_t GetYawPitchRoll(float *data, Quaternion *q, VectorFloat *gravity) {
 	data[2] = atan(gravity -> y / sqrt(gravity -> x*gravity -> x + gravity -> z*gravity -> z));
 	return 0;
 }
-

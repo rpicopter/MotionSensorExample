@@ -1,14 +1,14 @@
-CXX=g++
+GCC=gcc
 AR=ar
-CXXCFLAGS=-Wall -g -O2
-CXX_OPTS=-c
+GCC_CFLAGS=-Wall -g -O2
+GCC_OPTS=-c
 LDFLAGS= -lm -lrt
 
 LIB=../libI2Cdev.a
 OBJ=I2Cdev.o
 
 %.o: %.c                                                                         
-	$(CXX) $(CXXFLAGS) $(CXX_OPTS) $< -o $@ 
+	$(GCC) $(GCC_FLAGS) $(GCC_OPTS) $< -o $@ 
 
 $(LIB): $(OBJ)
 	$(AR) rcs $(LIB) $(OBJ)

@@ -20,6 +20,10 @@
 #ifndef _INV_MPU_H_
 #define _INV_MPU_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define INV_X_GYRO      (0x40)
 #define INV_Y_GYRO      (0x20)
 #define INV_Z_GYRO      (0x10)
@@ -115,6 +119,10 @@ uint8_t mpu_load_firmware(uint16_t length, const uint8_t *firmware, uint16_t sta
 uint8_t mpu_reg_dump(void);
 uint8_t mpu_read_reg(uint8_t reg, uint8_t *data);
 uint8_t mpu_run_self_test(int32_t *gyro, int32_t *accel);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  /* _INV_MPU_H_ */
 

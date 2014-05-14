@@ -6,6 +6,11 @@
 #define ROLL 2
 #define DIM 3
 
+#if defined(__cplusplus)
+extern "C"
+{
+#endif
+
 extern float ypr[3]; //yaw, pitch, roll
 extern float accel[3];
 extern float gyro[3];
@@ -15,5 +20,9 @@ extern float compass[3];
 extern int ms_open();
 extern int ms_update();
 extern int ms_close();
+
+#if defined(__cplusplus)
+}
+#endif
 
 #endif
